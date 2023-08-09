@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- rental_list.html -->
+<html>
+<head>
+    <title>Rent List</title>
+</head>
+<body>
+    <h1>Rent List</h1>
+    <ul>
+        {% for rental in object_list %}
+            <li><a href="{% url 'rental_detail' rental.id %}">{{ rental }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+{% endblock %}

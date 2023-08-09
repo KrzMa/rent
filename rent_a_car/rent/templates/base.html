@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Welcome to Car Rental!</h1>
+<div class="navbar">
+    <a class="nav-item" href="{% url 'rentals' %}">
+        Rentals
+    </a>
+    <a class="nav-item" href="{% url 'cars' %}">
+        Car
+    </a>
+
+
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>
