@@ -1,8 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<!-- rental_list.html -->
+<html>
+<head>
+    <title>Car List</title>
+</head>
+<body>
+    <h1>Car List:</h1>
+    <a href="{% url 'car_create' %}">
+                <button type="button">Create Car</button>
+            </a>
+    <ul>
+        {% for car in cars %}
+            <li><a href="{% url 'car_detail' car.id %}">{{ car }}</a> </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
 
-{% for car in object_list %}
- <p><a href="{% url 'car_detail' car.pk %}">{{ car }}</a> </p>
-{% endfor %}
 {% endblock %}

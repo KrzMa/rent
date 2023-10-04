@@ -8,11 +8,17 @@
 </head>
 <body>
     <h1>Car specifications:</h1>
+    <a href="{% url 'car_update' car.id %}">
+                <button type="button">Update Car</button>
+            </a>
     <p>Brand: {{ car.brand }}</p>
     <p>Model: {{ car.model }}</p>
     <p>Year: {{ car.year }}</p>
     <p>Deposit: {{ car.deposit }}</p>
     <p>Price per day: {{ car.price }}</p>
+    <a href="{% url 'cars' %}">
+                <button type="button">Back</button>
+            </a>
 
 </body>
 </html>
